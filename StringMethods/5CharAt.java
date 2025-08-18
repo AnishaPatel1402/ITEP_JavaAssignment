@@ -9,5 +9,6 @@ class Test{
         Method m = new Method();
         String str = "Anisha";
         System.out.println(m.charAtIndex(str,4));
+        // System.out.println(m.charAtIndex(str,1));
     }
 }

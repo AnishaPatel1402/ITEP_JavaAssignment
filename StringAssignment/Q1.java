@@ -36,7 +36,7 @@ class Test{
             }
         }
         //reverse last word 
-        reverse = reverse + reverseString(word) + " ";
+        reverse = reverse + reverseString(word);
         System.out.println("Reversed string = "+ reverse);
     }
 }

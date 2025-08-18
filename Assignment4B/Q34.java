@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class Test{
-    //perfect number 
+    //perfect number : sum of divisors should be equal to number itself
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         System.out.println("enter a number");

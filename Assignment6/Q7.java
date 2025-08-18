@@ -10,5 +10,18 @@ class Test{
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
+        System.out.println("enter the value of k = ");
+        int k = sc.nextInt();
+
+        for(int i=0; i<n; i++){
+            int sum = 0;
+            for(int j=i; j<n; j++){
+                sum += arr[j];
+                if(sum > k) break;
+                else if(sum == k){
+                    System.out.println("subarray index : "+ i +" "+ j);
+                }
+            }
+        }
     }
 }

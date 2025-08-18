@@ -21,5 +21,14 @@ class Test{
             arr[i] = sc.nextInt();
         }
 
+        for(int i=0; i<n; i++){
+            int zero = 0, ones = 0;
+            for(int j=i; j<n; j++){
+                if(arr[j]==0) zero++;
+                else(arr[j]==1) ones++;
+            }
+        }
+        
+
     }
 }

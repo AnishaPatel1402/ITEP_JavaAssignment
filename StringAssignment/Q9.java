@@ -11,7 +11,7 @@ class Test{
         String s2 = sc.next();
         if(s1.length() != s2.length()) System.out.println("String are not anagrams");
         else{
-            boolean visited[] = new boolean[s2.length()];
+            boolean visited[] = new boolean[s2.length()];  //for character of s2
 
             for(int i=0; i<s1.length(); i++){
                 char ch = s1.charAt(i);

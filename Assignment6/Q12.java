@@ -13,22 +13,40 @@ import java.util.Scanner;
 class Test{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        System.out.print("enter size = ");
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        System.out.println("enter "+ n + " elements ");
-        for(int i=0; i<n; i++){
-            arr[i] = sc.nextInt();
+        System.out.print("enter size of array 1 = ");
+        int n1 = sc.nextInt();
+        int arr1[] = new int[n1];
+        System.out.println("enter "+ n1 + " elements of array 1 = ");
+        for(int i=0; i<n1; i++){
+            arr1[i] = sc.nextInt();
         }
 
-        for(int i=0; i<n; i++){
-            int zero = 0, ones = 0;
-            for(int j=i; j<n; j++){
-                if(arr[j]==0) zero++;
-                else(arr[j]==1) ones++;
-            }
+       System.out.print("enter size of array 2 = ");
+        int n2 = sc.nextInt();
+        int arr2[] = new int[n2];
+        System.out.println("enter "+ n2 + " elements of array 2 = ");
+        for(int i=0; i<n2; i++){
+            arr2[i] = sc.nextInt();
         }
         
+        System.out.print("enter size of array 3 = ");
+        int n3 = sc.nextInt();
+        int arr3[] = new int[n3];
+        System.out.println("enter "+ n3 + " elements of array 3 = ");
+        for(int i=0; i<n1; i++){
+            arr1[i] = sc.nextInt();
+        }
+
+        //common element in three arrays
+        for(int i=0; i<n1; i++){
+            for(int j=0; j<n2; j++){
+                if(arr1[i]==arr2[j]){
+                    for(int k=0; k<n3; k++){
+                        if(arr1[i]==arr3[k])  System.out.print(arr1[i]+" ");
+                    }
+                }
+            }
+        }
 
     }
 }

@@ -45,6 +45,18 @@ class Test{
             }
             i--;
         }
+
+
+        //method 3
+        // for(i=0; i<n; i++){
+        //     for(int j=i; j<n-1; j++){
+        //         if(arr[j] < arr[j+1]){  //wrong order swap them
+        //             int temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
         printArr(arr);
     }
 }

@@ -33,16 +33,20 @@ class Test{
         int n3 = sc.nextInt();
         int arr3[] = new int[n3];
         System.out.println("enter "+ n3 + " elements of array 3 = ");
-        for(int i=0; i<n1; i++){
-            arr1[i] = sc.nextInt();
+        for(int i=0; i<n3; i++){
+            arr3[i] = sc.nextInt();
         }
 
         //common element in three arrays
+        System.out.print("common element are = ");
         for(int i=0; i<n1; i++){
             for(int j=0; j<n2; j++){
                 if(arr1[i]==arr2[j]){
                     for(int k=0; k<n3; k++){
-                        if(arr1[i]==arr3[k])  System.out.print(arr1[i]+" ");
+                        if(arr1[i]==arr3[k]) {
+                            System.out.print(arr1[i]+" ");
+                            break;
+                        }
                     }
                 }
             }

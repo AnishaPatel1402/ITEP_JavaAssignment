@@ -38,8 +38,7 @@ class Test{
             else one++;
             if(one == zero){
                 equalSubarray++;
-            }
-            
+            }  
          }
        }
        System.out.println("Number of subarrays are = "+ equalSubarray);

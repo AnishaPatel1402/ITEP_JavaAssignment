@@ -33,28 +33,44 @@ class Test{
         int k = sc.nextInt();
 
         //sort the array
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n-i-1; j++){
-                if(arr[j] > arr[j+1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
+        // for(int i=0; i<n; i++){
+        //     for(int j=0; j<n-i-1; j++){
+        //         if(arr[j] > arr[j+1]) {
+        //             int temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
 
         //now find k 
-        int kIndex = -1;
-        int low = 0, high = n-1;
-        while(low < high){
-            int mid = (low+high)/2;
-            if(arr[mid]==target) {
-                kIndex = mid;
-                break;
-            } else if(arr[mid] > )
+        // int low = 0, high = n-1;
+        // while(low < high){
+        //     int mid = (low+high)/2;
+        //     if(arr[mid]==k) {
+        //         break;
+        //     } 
+        //     else if(arr[mid] > k) high = mid-1;
+        //     else low = mid + 1;
+        // }
+
+        // printArr(arr);
+        // System.out.println(low +" "+ high);  //low : nearest lesser | high = nearest greater
+        // int lesser = arr[low];
+        // int higher = arr[high];
+        // System.out.println("nearest lesser: "+ lesser);
+        // System.out.println("nearest greater: "+ higher);
+
+
+        int lesser = Integer.MIN_VALUE, greater = Integer.MAX_VALUE;
+        for(int i=0; i<n; i++){
+            if(arr[i] < k && arr[i] > lesser) lesser = arr[i];
+            else if(arr[i] > k && arr[i] < greater) greater = arr[i];
         }
 
-        printArr(arr);
-
+        if(lesser != Integer.MIN_VALUE)  System.out.println("nearest lesser: "+ lesser);
+        else System.out.println("No nearest lesser exists");
+        if(greater != Integer.MAX_VALUE)  System.out.println("nearest greater: "+ greater);
+        else System.out.println("No nearest greater exists");
     }
 }

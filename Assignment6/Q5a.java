@@ -56,9 +56,24 @@ class Test{
             arr[i] = arr[minIndex];
             arr[minIndex] = temp;
         }
-       int kthSmall = arr[k-1];
-       int kthLarge = arr[n-k];
-       System.out.println("Kth small element = "+ kthSmall);
-       System.out.println("Kth largest element = "+ kthLarge);
+
+        //now remove dublicates from array
+        int unique = 1;
+        for(int i=1; i<n; i++){
+            if(arr[i-1]!=arr[i]){
+                arr[unique] = arr[i];
+                unique++;
+            }
+        }
+
+        System.out.print("unique element are : ");
+        for(int i=0; i<unique; i++){
+            System.out.print(arr[i]+" ");
+        }
+
+    //    int kthSmall = arr[k-1];
+    //    int kthLarge = arr[n-k];
+    //    System.out.println("Kth small element = "+ kthSmall);
+    //    System.out.println("Kth largest element = "+ kthLarge);
     }
 }

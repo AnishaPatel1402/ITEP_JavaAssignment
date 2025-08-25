@@ -29,5 +29,32 @@ class Test{
             arr[i] = sc.nextInt();
         }
 
+        System.out.println("enter the value of k: ");
+        int k = sc.nextInt();
+
+        //sort the array
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n-i-1; j++){
+                if(arr[j] > arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+
+        //now find k 
+        int kIndex = -1;
+        int low = 0, high = n-1;
+        while(low < high){
+            int mid = (low+high)/2;
+            if(arr[mid]==target) {
+                kIndex = mid;
+                break;
+            } else if(arr[mid] > )
+        }
+
+        printArr(arr);
+
     }
 }

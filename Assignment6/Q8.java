@@ -35,28 +35,28 @@ class Test{
         //method 2
         printArr(arr);
         int i=n-1;
-        while(i>=0){
-            if(arr[i] < 0){//negative 
-                for(int j=i+1; j<n && arr[j]>0; j++){
-                    int temp = arr[j-1];
-                    arr[j-1] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-            i--;
-        }
+        // while(i>=0){
+        //     if(arr[i] < 0){//negative 
+        //         for(int j=i+1; j<n && arr[j]>0; j++){
+        //             int temp = arr[j-1];
+        //             arr[j-1] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        //     i--;
+        // }
 
 
         //method 3
-        // for(i=0; i<n; i++){
-        //     for(int j=i; j<n-1; j++){
-        //         if(arr[j] < arr[j+1]){  //wrong order swap them
-        //             int temp = arr[j];
-        //             arr[j] = arr[j+1];
-        //             arr[j+1] = temp;
-        //         }
-        //     }
-        // }
+        for(i=0; i<n; i++){
+            for(int j=i; j<n-1; j++){
+                if(arr[j] < arr[j+1]){  //wrong order swap them
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
         printArr(arr);
     }
 }

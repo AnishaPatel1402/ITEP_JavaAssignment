@@ -6,7 +6,7 @@ class School{
     ArrayList<Student> list = new ArrayList<Student>();
     Scanner sc = new Scanner(System.in);
     public void init(){
-        for(int i=1; i<=10; i++){
+        for(int i=1; i<=4; i++){
             System.out.print("enter the name, rollno, age and score of student "+ i +" : ");
             String name = sc.next();
             int roll = sc.nextInt();
